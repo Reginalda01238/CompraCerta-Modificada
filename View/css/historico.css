@@ -1,0 +1,260 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    background-color: #f1f3f4;
+    font-family: sans-serif;
+}
+
+.top-nav-bar{
+    margin: 0px;
+    height: 57px;
+    top: 0;
+    position: sticky;
+    background: #fff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid orange;
+    z-index: 2;
+}
+
+.logo{
+    height: 40px;
+    margin: 5px  10px;
+}
+.form-control{
+    width: 900px;
+    margin-top: 9px;
+    margin-left: 30px;
+    border: 1px solid orange !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none;
+}
+
+.input-group-text{
+    background: orange !important;
+    border: 1px solid orange !important;
+    margin: 8.5px 10px 3px 0 !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 20 !important;
+    border-bottom-right-radius: 20 !important;
+    cursor: pointer;
+}
+.search-box{
+    display: inline-flex;
+    width: 60%;
+}
+
+.fa-search{
+    color: #fff;
+}
+
+.menu-bar{
+    width: 40%;
+    height: 57px;
+    float: right;
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    float: right;
+}
+
+.menu-bar ul li{
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    padding: 20px 8px;
+    text-align: center;
+    background-color: orange;
+    cursor: pointer;
+
+}
+
+.menu-bar ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-shopping-cart{
+    margin-right: 5px;
+}
+
+@media only screen and (max-width:980px){
+    .top-nav-bar{
+        height: 118px;
+        border-bottom: 0;
+    }
+    .search-box{
+        width: 100%;
+    }
+    .menu-bar{
+        width: 100%;
+    }
+    .menu-bar ul{
+        margin: 10px 0;
+        width: 100%;
+    }
+    .menu-bar ul li{
+        height: 57px;
+        width: 100%;
+    }
+}
+
+/*---------------------------- Side-menu --------------------*/
+.side-menu{
+    height: 79%;
+    width: 15%;
+    font-size: 14px;
+    float: left;
+    z-index: 2;
+    background-color: #ddd;
+}
+
+.side-menu ul{
+    margin-left: 10px;
+}
+
+.side-menu ul li{
+    list-style-type: none;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.side-menu ul li:hover{
+    color: orange;
+}
+
+.side-menu ul li ul{
+    display: none;
+    z-index: 10;
+    top: 77px;
+}
+
+.side-menu ul li:hover ul{
+    display: block;
+    height: 400px;
+    margin-left: 14%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background: #ececec;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0, 5); 
+}
+
+.fa-angle-right{
+    margin-top: 4px;
+    margin-right: 8px;
+    float: right;
+}
+
+#menu-btn, #close-btn{
+    font-size: 30px;
+    margin: 10px;
+    color: orange;
+}
+@media only screen and (max-width:980px){
+    .side-menu{
+        width: 34%;
+        z-index: 20;
+        top: 133px;
+        padding: fixed;
+        font-size: 12px;
+        display: none;
+    }
+    .side-menu ul li ul{
+        top: 133px;
+    }
+    .side-menu ul li:hover{
+       margin-left: 31%;
+    }
+    #menu-btn{
+        display: block;
+    }
+}
+
+
+/*---------------Historico de Compras---------------*/
+
+main{
+
+    background-size: cover;
+    background-position: center;
+}
+
+.progress{
+    margin: 300px auto;
+    color: orange;
+}
+
+.progress img{
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+main ul{
+    text-align: center;
+}
+
+main ul li{
+    display: inline-block;
+    width: 170px;
+    position: relative;
+}
+
+main ul li .fa{
+    background: #ccc;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+main ul li .fa::after{
+    content: '';
+    background: #ccc;
+    height: 5px;
+    width: 205px;
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+main ul li:nth-child(3) .fa{
+    background: green;
+}
+
+main ul li:nth-child(3) .fa::after{
+    background: green;
+}
+
+main ul li:nth-child(1) .fa,
+main ul li:nth-child(2) .fa{
+    background: #60aa97;
+}
+
+main ul li:nth-child(1) .fa::after,
+main ul li:nth-child(2) .fa::after{
+    background: #60aa97;
+}
+
+main ul li:first-child .fa::after{
+    width: 105px;
+    left: 100px;
+}
+
+main ul li:last-child .fa::after{
+    width: 105px;
+   
+}
